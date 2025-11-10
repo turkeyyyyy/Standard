@@ -1,4 +1,4 @@
-# Agents.JSON  
+# JSON Agents  
 ## Portable Agent Manifest (PAM) Specification  
 Category: Standards Track  
 November 2025  
@@ -7,7 +7,7 @@ November 2025
 
 ## Status of this Memo
 
-This document defines the **Agents.JSON - Portable Agent Manifest (PAM)**, a JSON-based standard for describing AI agents and agent graphs in a portable, schema-driven format.
+This document defines the **JSON Agents - Portable Agent Manifest (PAM)**, a JSON-based standard for describing AI agents and agent graphs in a portable, schema-driven format.
 
 This specification is distributed for public implementation, review, and discussion.  
 Distribution is unlimited.
@@ -16,14 +16,14 @@ Distribution is unlimited.
 
 ## Copyright Notice
 
-Copyright © 2025 Agents.JSON.  
+Copyright © 2025 JSON Agents.  
 All Rights Reserved.
 
 ---
 
 ## Abstract
 
-**Agents.JSON** defines the **Portable Agent Manifest (PAM)** — a universal, JSON-native format for representing AI agents, their capabilities, tools, runtimes, and governance metadata.  
+**JSON Agents** defines the **Portable Agent Manifest (PAM)** — a universal, JSON-native format for representing AI agents, their capabilities, tools, runtimes, and governance metadata.  
 
 PAM provides a single, interoperable structure that allows agents to be described, validated, and exchanged across frameworks, platforms, and ecosystems without code translation.
 
@@ -60,7 +60,7 @@ Appendix A. Normative JSON Schema
 The agent ecosystem has evolved through a patchwork of incompatible manifest formats — each framework defining unique metadata structures, tool schemas, and governance models.  
 This fragmentation prevents portability, interoperability, and consistent validation.
 
-Agents.JSON introduces the **Portable Agent Manifest (PAM)** as a shared schema for defining AI agents declaratively.  
+JSON Agents introduces the **Portable Agent Manifest (PAM)** as a shared schema for defining AI agents declaratively.  
 The goal is to make agents:
 
 - **Framework-agnostic**
@@ -311,7 +311,7 @@ Top-level fields:
 ```json
 "graph": {
   "message_envelope": {
-    "schema": "https://agents.json.org/schema/message-envelope.json"
+    "schema": "https://jsonagents.org/schema/message-envelope.json"
   }
 }
 ```
@@ -342,7 +342,7 @@ Implementations MUST ignore unrecognized extensions.
 
 A manifest is conformant if:
 
-* It validates against the Agents.JSON schema.
+* It validates against the JSON Agents schema.
 * Declared profiles match included sections.
 * No unknown non-extension fields are present.
 
@@ -405,7 +405,7 @@ Implementations MAY maintain public registries for:
 
 ### 15.1 Media Type
 
-Agents.JSON manifests SHOULD use the media type:
+JSON Agents manifests SHOULD use the media type:
 
 ```
 application/agents+json
@@ -415,7 +415,7 @@ This media type is intended for registration with IANA and follows the structure
 
 ### 15.2 File Extension
 
-The recommended file extension for Agents.JSON manifests is:
+The recommended file extension for JSON Agents manifests is:
 
 ```
 .agents.json
@@ -425,7 +425,7 @@ This extension clearly identifies agent manifest files while maintaining compati
 
 ### 15.3 Content Negotiation
 
-Servers and clients MAY use standard HTTP content negotiation to request or serve Agents.JSON manifests:
+Servers and clients MAY use standard HTTP content negotiation to request or serve JSON Agents manifests:
 
 ```http
 Accept: application/agents+json
@@ -447,5 +447,5 @@ Content-Type: application/agents+json
 
 ## Appendix A. Normative JSON Schema
 
-See [`schema/agents-json.json`](./schema/agents-json.json) for the normative schema definition.
+See [`schema/json-agents.json`](./schema/json-agents.json) for the normative schema definition.
 

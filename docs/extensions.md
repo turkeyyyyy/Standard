@@ -1,12 +1,12 @@
 # Extensions Guide
 
-> How to safely extend **Agents.JSON** using the `x-*` namespace and structured extension definitions.
+> How to safely extend **JSON Agents** using the `x-*` namespace and structured extension definitions.
 
 ---
 
 ## 🌐 1. Purpose
 
-Agents.JSON is designed to evolve.  
+JSON Agents is designed to evolve.  
 To prevent schema fragmentation while allowing innovation, the specification defines an **extensions mechanism** that lets implementers add new fields, namespaces, and behaviors without breaking compatibility.
 
 ---
@@ -53,7 +53,7 @@ To make extensions interoperable, each may include an `$schema` reference:
 ```json
 {
   "x-audit": {
-    "$schema": "https://agents.json.org/extensions/audit.json",
+    "$schema": "https://jsonagents.org/extensions/audit.json",
     "level": "detailed",
     "include_payloads": false
   }
@@ -81,7 +81,7 @@ Extension schemas are defined independently in `/schema/extensions/`.
 ```json
 {
   "x-memory": {
-    "$schema": "https://agents.json.org/extensions/memory.json",
+    "$schema": "https://jsonagents.org/extensions/memory.json",
     "provider": "vector-db",
     "engine": "qdrant",
     "capacity": 50000,
@@ -101,9 +101,9 @@ This would define additional memory configuration outside the core specification
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://agents.json.org/schema/extensions/audit.json",
+  "$id": "https://jsonagents.org/schema/extensions/audit.json",
   "title": "Extension: Audit",
-  "description": "Custom auditing configuration for Agents.JSON manifests.",
+  "description": "Custom auditing configuration for JSON Agents manifests.",
   "type": "object",
   "properties": {
     "level": {
@@ -130,17 +130,17 @@ All extensions SHOULD be listed in a central registry file:
 
 ```json
 {
-  "$id": "https://agents.json.org/registry/extensions.json",
+  "$id": "https://jsonagents.org/registry/extensions.json",
   "version": "2025-11-09",
   "extensions": [
     {
       "id": "x-audit",
-      "schema": "https://agents.json.org/schema/extensions/audit.json",
+      "schema": "https://jsonagents.org/schema/extensions/audit.json",
       "description": "Adds auditing options to agent manifests."
     },
     {
       "id": "x-memory",
-      "schema": "https://agents.json.org/schema/extensions/memory.json",
+      "schema": "https://jsonagents.org/schema/extensions/memory.json",
       "description": "Persistent memory and vector store configuration."
     }
   ]
@@ -171,7 +171,7 @@ When adding extensions:
 
 ## 🧠 11. Future-Proofing
 
-Future versions of Agents.JSON will support:
+Future versions of JSON Agents will support:
 
 * **Extension discovery APIs**
 * **Signed extension manifests**
@@ -181,5 +181,5 @@ Until then, extensions remain static, versioned JSON objects validated via `$sch
 
 ---
 
-© 2025 Agents.JSON Project. All rights reserved.
+© 2025 JSON Agents Project. All rights reserved.
 

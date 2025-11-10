@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://agents.json.org/schema/message-envelope.json",
-  "title": "Agents.JSON Message Envelope",
+  "$id": "https://jsonagents.org/schema/message-envelope.json",
+  "title": "JSON Agents Message Envelope",
   "description": "Canonical JSON structure for messages exchanged between agents.",
   "type": "object",
   "required": ["id", "from", "to", "timestamp", "payload"],
@@ -78,7 +78,7 @@
     },
     "extensions": {
       "type": "object",
-      "description": "Namespaced extension data following the Agents.JSON extension rules.",
+      "description": "Namespaced extension data following the JSON Agents extension rules.",
       "additionalProperties": true
     }
   },
@@ -90,7 +90,7 @@
       "timestamp": "2025-11-09T12:34:56Z",
       "intent": "faq",
       "payload": {
-        "question": "What is Agents.JSON?",
+        "question": "What is JSON Agents?",
         "language": "en"
       },
       "metadata": {

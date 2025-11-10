@@ -1,6 +1,6 @@
 {
-  "$id": "https://agents.json.org/registry/tool-types.json",
-  "description": "Canonical registry of recommended tool.type values for Agents.JSON manifests.",
+  "$id": "https://jsonagents.org/registry/tool-types.json",
+  "description": "Canonical registry of recommended tool.type values for JSON Agents manifests.",
   "version": "2025-11-09",
   "tool_types": [
     {

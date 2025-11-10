@@ -1,22 +1,22 @@
 {
-  "$id": "https://agents.json.org/registry/capabilities.json",
-  "description": "Canonical registry of well-known capability identifiers for Agents.JSON manifests.",
+  "$id": "https://jsonagents.org/registry/capabilities.json",
+  "description": "Canonical registry of well-known capability identifiers for JSON Agents manifests.",
   "version": "2025-11-09",
   "capabilities": [
     {
       "id": "summarization",
       "description": "Summarize one or more input texts.",
-      "schema": "https://agents.json.org/schema/capabilities/summarization.json"
+      "schema": "https://jsonagents.org/schema/capabilities/summarization.json"
     },
     {
       "id": "routing",
       "description": "Route messages to appropriate agents or tools based on content or intent.",
-      "schema": "https://agents.json.org/schema/capabilities/routing.json"
+      "schema": "https://jsonagents.org/schema/capabilities/routing.json"
     },
     {
       "id": "retrieval",
       "description": "Retrieve relevant information or documents from one or more data sources.",
-      "schema": "https://agents.json.org/schema/capabilities/retrieval.json"
+      "schema": "https://jsonagents.org/schema/capabilities/retrieval.json"
     },
     {
       "id": "qa",

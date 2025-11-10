@@ -1,7 +1,7 @@
 # Summary
 
-* [Agents.JSON Overview](README.md)
-* [Agents.JSON Specification](agents-json.md)
+* [JSON Agents Overview](README.md)
+* [JSON Agents Specification](json-agents.md)
 
 ## Guides
 
@@ -12,7 +12,7 @@
 
 ## Schemas
 
-* [Core Manifest Schema](schema/agents-json.json)
+* [Core Manifest Schema](schema/json-agents.json)
 * [Message Envelope](schema/message-envelope.json)
 * Capabilities
   * [Summarization](schema/capabilities/summarization.json)

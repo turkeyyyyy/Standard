@@ -1,15 +1,15 @@
 # Framework & Format Mapping
 
-> How existing AI agent frameworks and formats can interoperate with **Agents.JSON**.
+> How existing AI agent frameworks and formats can interoperate with **JSON Agents**.
 
 ---
 
 ## 🎯 Purpose
 
-This document provides a **crosswalk** between Agents.JSON and other widely used agent frameworks.  
+This document provides a **crosswalk** between JSON Agents and other widely used agent frameworks.  
 It is intended for developers seeking to **convert**, **import**, or **export** manifests to and from other ecosystems.
 
-Agents.JSON acts as a **unifying layer**, not a competing runtime — its goal is to describe any agent in a way that is portable and self-contained.
+JSON Agents acts as a **unifying layer**, not a competing runtime — its goal is to describe any agent in a way that is portable and self-contained.
 
 ---
 
@@ -17,33 +17,33 @@ Agents.JSON acts as a **unifying layer**, not a competing runtime — its goal i
 
 | Principle | Description |
 |------------|--------------|
-| **Declarative over imperative** | Agents.JSON is a description of what an agent *is*, not how it runs. |
+| **Declarative over imperative** | JSON Agents is a description of what an agent *is*, not how it runs. |
 | **Stable identity** | Every agent has a globally unique `id`. |
 | **Capability modularity** | Each capability has its own schema. |
 | **Runtime neutrality** | Manifest does not assume Python, Node, or Go — it's runtime-agnostic. |
 | **Interoperable serialization** | Converts easily to and from framework manifests using JSON or YAML. |
-| **Bidirectional conversion** | Supports both **Framework → Agents.JSON** (import/ingest) and **Agents.JSON → Framework** (export/deploy). |
+| **Bidirectional conversion** | Supports both **Framework → JSON Agents** (import/ingest) and **JSON Agents → Framework** (export/deploy). |
 
 ---
 
 ## 🔄 1.1 Conversion Patterns
 
-### Framework → Agents.JSON (Import/Ingest)
+### Framework → JSON Agents (Import/Ingest)
 
-Convert existing framework-specific agent definitions into portable Agents.JSON manifests:
+Convert existing framework-specific agent definitions into portable JSON Agents manifests:
 
 - **Extract** agent identity, capabilities, and tool definitions from framework-native formats
-- **Map** framework-specific fields to Agents.JSON standard properties
+- **Map** framework-specific fields to JSON Agents standard properties
 - **Normalize** runtime configurations to `runtime` profile
 - **Preserve** framework-specific metadata in `extensions` for round-trip fidelity
 
 **Use cases:** Agent registry, cross-framework discovery, governance audits, migration planning
 
-### Agents.JSON → Framework (Export/Deploy)
+### JSON Agents → Framework (Export/Deploy)
 
-Generate framework-specific agent implementations from Agents.JSON manifests:
+Generate framework-specific agent implementations from JSON Agents manifests:
 
-- **Translate** Agents.JSON `tools` array to framework tool registries
+- **Translate** JSON Agents `tools` array to framework tool registries
 - **Generate** framework boilerplate (e.g., LangChain chains, AutoGen agent configs)
 - **Map** `runtime.entrypoint` to framework initialization code
 - **Apply** capability constraints to framework execution patterns
@@ -64,7 +64,7 @@ Generate framework-specific agent implementations from Agents.JSON manifests:
 | **CrewAI / ReAct** | Capability layer | Each ReAct step = `capability` or tool call |
 | **LLM Gateway YAMLs (Ollama, vLLM)** | Runtime configuration | Translate environment variables to `runtime.resources` |
 | **Anthropic / Claude Tool Use** | Function definitions | Map directly to `tools[].input_schema` and `output_schema` |
-| **Vercel AI SDK** | Tool definitions / Multi-step flows | Map `tools` array to Agents.JSON `tools`; streamable UI to `modalities.output` |
+| **Vercel AI SDK** | Tool definitions / Multi-step flows | Map `tools` array to JSON Agents `tools`; streamable UI to `modalities.output` |
 
 ---
 
@@ -78,7 +78,7 @@ tools = load_tools(["serpapi", "llm-math"], llm=llm)
 agent = initialize_agent(tools, llm, agent_type="zero-shot-react-description")
 ````
 
-### → Agents.JSON Equivalent
+### → JSON Agents Equivalent
 
 ```json
 {
@@ -107,7 +107,7 @@ agent = initialize_agent(tools, llm, agent_type="zero-shot-react-description")
 
 ## 💬 4. OpenAI Manifest Mapping
 
-| OpenAI Manifest Field   | Agents.JSON Equivalent                   |
+| OpenAI Manifest Field   | JSON Agents Equivalent                   |
 | ----------------------- | ---------------------------------------- |
 | `schema_version`        | `manifest_version`                       |
 | `name_for_human`        | `agent.name`                             |
@@ -122,7 +122,7 @@ agent = initialize_agent(tools, llm, agent_type="zero-shot-react-description")
 
 ## 🧩 5. MCP (Model Context Protocol) Mapping
 
-Agents.JSON tools can embed MCP-like metadata:
+JSON Agents tools can embed MCP-like metadata:
 
 ```json
 {
@@ -137,14 +137,14 @@ Agents.JSON tools can embed MCP-like metadata:
 }
 ```
 
-This allows one-to-one interoperability between Agents.JSON manifests and any MCP server definitions.
+This allows one-to-one interoperability between JSON Agents manifests and any MCP server definitions.
 
 ---
 
 ## 🧠 6. AutoGen / Multi-Agent Graphs
 
 AutoGen and similar frameworks define **agent teams** or **conversation graphs**.
-These map directly to the Agents.JSON `graph` profile:
+These map directly to the JSON Agents `graph` profile:
 
 ```json
 {
@@ -164,7 +164,7 @@ These map directly to the Agents.JSON `graph` profile:
 
 ## 🔄 7. YAML ↔ JSON Interoperability
 
-For developer friendliness, Agents.JSON can be serialized in **YAML** (e.g., `agents.yaml`) without losing fidelity.
+For developer friendliness, JSON Agents can be serialized in **YAML** (e.g., `agents.yaml`) without losing fidelity.
 
 ```yaml
 manifest_version: "1.0"
@@ -185,7 +185,7 @@ All official tooling MUST support both `.json` and `.yaml` input formats.
 
 | Limitation                                                     | Reason                                                                      |
 | -------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| Some frameworks use imperative runtime setup (e.g., LangGraph) | Agents.JSON is declarative; orchestration logic must be abstracted.         |
+| Some frameworks use imperative runtime setup (e.g., LangGraph) | JSON Agents is declarative; orchestration logic must be abstracted.         |
 | Embedded code or model definitions are discouraged             | Encourages separation of manifest from executable payload.                  |
 | Frameworks with opaque plugin systems (e.g., AutoGPT plugins)  | Require manual mapping to `tool` entries until a shared descriptor exists.  |
 | Dynamic agent creation                                         | Supported only through external orchestration, not within static manifests. |
@@ -200,7 +200,7 @@ Community toolkits (planned):
   Convert OpenAI manifests automatically.
 
 * **`ajson validate`**
-  Validate against Agents.JSON schema.
+  Validate against JSON Agents schema.
 
 * **`ajson inspect`**
   Pretty-print manifest structure with color-coded sections.
@@ -218,4 +218,4 @@ When bridging frameworks:
 
 ---
 
-© 2025 Agents.JSON Project. All rights reserved.
+© 2025 JSON Agents Project. All rights reserved.

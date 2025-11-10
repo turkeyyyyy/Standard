@@ -1,12 +1,12 @@
-# Agents.JSON Documentation Index
+# JSON Agents Documentation Index
 
-> The central reference for understanding, implementing, and extending the **Agents.JSON** specification.
+> The central reference for understanding, implementing, and extending the **JSON Agents** specification.
 
 ---
 
 ## 📖 Overview
 
-**Agents.JSON** is a vendor-neutral, JSON-native format for defining **AI agents** in a portable, interoperable way.
+**JSON Agents** is a vendor-neutral, JSON-native format for defining **AI agents** in a portable, interoperable way.
 
 It allows agents, tools, and orchestrators to communicate using a shared schema that captures:
 
@@ -23,8 +23,8 @@ Each layer is defined through modular **Profiles**, ensuring systems can impleme
 
 | Document | Purpose |
 |-----------|----------|
-| [`agents-json.md`](../agents-json.md) | Normative specification (definition, fields, and rules). |
-| [`schema/agents-json.json`](../schema/agents-json.json) | Canonical JSON Schema for validation. |
+| [`json-agents.md`](../json-agents.md) | Normative specification (definition, fields, and rules). |
+| [`schema/json-agents.json`](../schema/json-agents.json) | Canonical JSON Schema for validation. |
 | [`/schema/`](../schema) | Component schemas (envelope, capabilities). |
 | [`/examples/`](../examples) | Example manifests for all profile combinations. |
 | [`/registry/`](../registry) | Canonical registries of capabilities, profiles, and tool types. |
@@ -58,14 +58,14 @@ Each layer is defined through modular **Profiles**, ensuring systems can impleme
 
 ## 🔗 Related Standards
 
-Agents.JSON is **derived entirely from JSON family standards**:
+JSON Agents is **derived entirely from JSON family standards**:
 
 - [RFC 8259 — The JSON Data Interchange Syntax](https://datatracker.ietf.org/doc/html/rfc8259)
 - [ECMA-404 — The JSON Data Interchange Format](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)
 - [JSON Schema 2020-12](https://json-schema.org/draft/2020-12/json-schema-core.html)
 - [ISO/IEC 21778:2017 — Information technology — The JSON data interchange syntax](https://www.iso.org/standard/71616.html)
 
-Agents.JSON follows these standards faithfully, adding domain semantics for AI agent interoperability.
+JSON Agents follows these standards faithfully, adding domain semantics for AI agent interoperability.
 
 ---
 
@@ -75,7 +75,7 @@ Agents.JSON follows these standards faithfully, adding domain semantics for AI a
   → How to validate, parse, and integrate manifests.
 
 - [Framework Mapping](./mapping-frameworks.md)  
-  → How LangChain, AutoGen, OpenAI Agents, and others map to Agents.JSON.
+  → How LangChain, AutoGen, OpenAI Agents, and others map to JSON Agents.
 
 - [Extensions Guide](./extensions.md)  
   → How to safely define and register your own extensions using the `x-*` namespace.
@@ -89,4 +89,4 @@ See [`LICENSE`](../LICENSE) for full text.
 
 ---
 
-© 2025 Agents.JSON Project. All rights reserved.
+© 2025 JSON Agents Project. All rights reserved.

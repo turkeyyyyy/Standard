@@ -1,24 +1,24 @@
 {
-  "$id": "https://agents.json.org/registry/extensions.json",
-  "title": "Agents.JSON Extension Registry",
+  "$id": "https://jsonagents.org/registry/extensions.json",
+  "title": "JSON Agents Extension Registry",
   "description": "Canonical registry of recognized and reusable extension namespaces (x-*).",
   "version": "2025-11-09",
   "extensions": [
     {
       "id": "x-audit",
-      "schema": "https://agents.json.org/schema/extensions/audit.json",
+      "schema": "https://jsonagents.org/schema/extensions/audit.json",
       "description": "Adds configurable auditing and log retention to agents.",
       "status": "stable",
       "introduced_in": "1.0",
-      "maintainer": "Agents.JSON Core"
+      "maintainer": "JSON Agents Core"
     },
     {
       "id": "x-memory",
-      "schema": "https://agents.json.org/schema/extensions/memory.json",
+      "schema": "https://jsonagents.org/schema/extensions/memory.json",
       "description": "Defines persistent or episodic memory storage and recall behavior.",
       "status": "stable",
       "introduced_in": "1.0",
-      "maintainer": "Agents.JSON Core"
+      "maintainer": "JSON Agents Core"
     },
     {
       "id": "x-research",

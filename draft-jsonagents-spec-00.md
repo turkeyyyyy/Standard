@@ -1,12 +1,12 @@
-Network Working Draft                                       Agents.JSON
+Network Working Draft                                       JSON Agents
 Category: Informational                                       9 Nov 2025
 Expires: 9 May 2026
 
-# The Agents.JSON Specification
+# The JSON Agents Specification
 
 ### Abstract
 
-Agents.JSON defines a portable, JSON-native format for describing AI agents,
+JSON Agents defines a portable, JSON-native format for describing AI agents,
 their capabilities, tools, runtimes, and governance metadata.  
 It provides a vendor-neutral and interoperable structure that allows different
 frameworks, runtimes, and orchestrators to exchange agent definitions
@@ -31,7 +31,7 @@ Comments are solicited via public repositories and discussion forums.
 AI agents have become foundational components of modern systems.
 However, frameworks and vendors currently define incompatible
 manifest formats.  
-Agents.JSON introduces a **common language** that is:
+JSON Agents introduces a **common language** that is:
 - JSON-based
 - Schema-validated
 - Extensible through the `x-*` namespace
@@ -47,7 +47,7 @@ Agents.JSON introduces a **common language** that is:
 | **Capability** | A declarative description of a function or skill the agent can perform. |
 | **Tool** | A callable external or internal resource invoked by an agent. |
 | **Profile** | A modular section of the specification defining required fields for a functional area (`core`, `exec`, `gov`, `graph`). |
-| **Manifest** | A JSON document conforming to the Agents.JSON schema that defines a single agent or composition. |
+| **Manifest** | A JSON document conforming to the JSON Agents schema that defines a single agent or composition. |
 | **Extension** | A namespaced addition beginning with `x-`, providing optional experimental or organization-specific data. |
 
 ---
@@ -64,14 +64,14 @@ Agents.JSON introduces a **common language** that is:
 
 ## 4. JSON Schema Conformance
 
-All Agents.JSON documents MUST conform to [JSON Schema 2020-12](https://json-schema.org).
+All JSON Agents documents MUST conform to [JSON Schema 2020-12](https://json-schema.org).
 Implementations MUST reject invalid manifests.
 
 The canonical schema is located at:
 
 ```
 
-[https://agents.json.org/schema/agents-json.json](https://agents.json.org/schema/agents-json.json)
+[https://jsonagents.org/schema/json-agents.json](https://jsonagents.org/schema/json-agents.json)
 
 ````
 
@@ -113,7 +113,7 @@ Profiles are additive; implementations MAY support subsets.
 Capabilities reference schemas such as:
 
 ```
-https://agents.json.org/schema/capabilities/summarization.json
+https://jsonagents.org/schema/capabilities/summarization.json
 ```
 
 Tools include `type`, `input_schema`, `output_schema`, and optional `auth`.
@@ -155,7 +155,7 @@ The `gov` profile introduces structured policy and observability.
 
 ## 9. Graph Composition
 
-Agents.JSON defines graphs for orchestrating multi-agent systems:
+JSON Agents defines graphs for orchestrating multi-agent systems:
 
 ```json
 {
@@ -183,7 +183,7 @@ Extensions enable experimentation without fragmentation.
 ```json
 {
   "x-memory": {
-    "$schema": "https://agents.json.org/schema/extensions/memory.json",
+    "$schema": "https://jsonagents.org/schema/extensions/memory.json",
     "provider": "vector-db",
     "engine": "qdrant"
   }
@@ -222,7 +222,7 @@ File extension:
 
 ## 13. Acknowledgments
 
-The Agents.JSON design draws on lessons from JSON Schema,
+The JSON Agents design draws on lessons from JSON Schema,
 OpenAPI, and model-context protocols.
 Thanks to the open-source community for collaborative feedback.
 
@@ -239,7 +239,7 @@ Thanks to the open-source community for collaborative feedback.
 
 ### Authors’ Addresses
 
-Agents.JSON Project
+JSON Agents Project
 Email: [spec@agentsjson.org](mailto:spec@agentsjson.org)
 URL: [https://agentsjson.org](https://agentsjson.org)
 
@@ -247,6 +247,6 @@ URL: [https://agentsjson.org](https://agentsjson.org)
 
 ### Full Copyright Statement
 
-Copyright © 2025 Agents.JSON Project.
+Copyright © 2025 JSON Agents Project.
 This document may be copied and distributed freely with attribution.
 

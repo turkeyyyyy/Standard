@@ -1,5 +1,5 @@
 # Changelog  
-All notable changes to the Agents.JSON specification will be documented in this file.
+All notable changes to the JSON Agents specification will be documented in this file.
 
 This project adheres to [Semantic Versioning 2.0.0](https://semver.org/).
 
@@ -22,12 +22,12 @@ This project adheres to [Semantic Versioning 2.0.0](https://semver.org/).
 **Initial Publication**
 
 ### Added
-- **Agents.JSON Specification (`agents-json.md`)**  
+- **JSON Agents Specification (`json-agents.md`)**  
   - Defines the **Portable Agent Manifest (PAM)** model.  
   - Includes normative structure for `core`, `exec`, `gov`, and `graph` profiles.  
   - Provides formal terminology, examples, and conformance sections.
 
-- **Canonical JSON Schema (`schema/agents-json.json`)**  
+- **Canonical JSON Schema (`schema/json-agents.json`)**  
   - Implements validation for all core fields and conditional profile requirements.  
   - Supports `extensions` and `x-*` namespaces.  
   - Ensures JSON Schema 2020-12 compatibility.
@@ -90,4 +90,4 @@ Backward compatibility will be preserved whenever feasible.
 
 ---
 
-**© 2025 Agents.JSON. All rights reserved.**
+**© 2025 JSON Agents. All rights reserved.**

@@ -1,6 +1,6 @@
 {
-  "$id": "https://agents.json.org/registry/profiles.json",
-  "description": "Registry of recognized Agents.JSON profile identifiers.",
+  "$id": "https://jsonagents.org/registry/profiles.json",
+  "description": "Registry of recognized JSON Agents profile identifiers.",
   "version": "2025-11-09",
   "profiles": [
     {

@@ -1,6 +1,6 @@
-# Contributing to Agents.JSON
+# Contributing to JSON Agents
 
-Thank you for your interest in improving **Agents.JSON** — the open specification for defining portable AI agents.
+Thank you for your interest in improving **JSON Agents** — the open specification for defining portable AI agents.
 
 This document explains how to propose changes, report issues, and contribute new content to the repository.
 
@@ -9,7 +9,7 @@ This document explains how to propose changes, report issues, and contribute new
 ## 📜 Guiding Principles
 
 1. **Neutrality:**  
-   Agents.JSON aims to remain framework-agnostic and vendor-neutral.
+   JSON Agents aims to remain framework-agnostic and vendor-neutral.
 
 2. **Clarity over complexity:**  
    Favor explicit field definitions, clear JSON examples, and human-readable schema descriptions.
@@ -28,7 +28,7 @@ This document explains how to propose changes, report issues, and contribute new
 - **Propose schema changes:** add or refine properties in the JSON Schema.  
 - **Suggest new profiles:** expand functionality while keeping the core minimal.  
 - **Add examples:** new agent configurations, tool schemas, or graph topologies.  
-- **Discuss interoperability:** map how existing frameworks could align with Agents.JSON.
+- **Discuss interoperability:** map how existing frameworks could align with JSON Agents.
 
 ---
 
@@ -44,7 +44,7 @@ This document explains how to propose changes, report issues, and contribute new
 
    ```bash
    npm install -g ajv-cli
-   ajv validate -s schema/agents-json.json -d examples/*.json
+   ajv validate -s schema/json-agents.json -d examples/*.json
    ```
 4. Commit and push your changes:
 
@@ -70,8 +70,8 @@ All pull requests must include:
 
 | Type          | Directory                         | Convention                                |
 | ------------- | --------------------------------- | ----------------------------------------- |
-| Specification | `/agents-json.md`                 | Lowercase with hyphen                     |
-| Schema        | `/schema/agents-json.json`        | One canonical schema per version          |
+| Specification | `/json-agents.md`                 | Lowercase with hyphen                     |
+| Schema        | `/schema/json-agents.json`        | One canonical schema per version          |
 | Examples      | `/examples/`                      | Descriptive names (`core-exec-gov.json`)  |
 | Docs          | `/docs/`                          | Markdown files for guides and mappings    |
 | Registries    | `/registry/`                      | JSON lists defining canonical identifiers |

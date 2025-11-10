@@ -1,12 +1,12 @@
 # Implementer’s Guide
 
-> A practical reference for developers integrating **Agents.JSON** into their frameworks, SDKs, or orchestrators.
+> A practical reference for developers integrating **JSON Agents** into their frameworks, SDKs, or orchestrators.
 
 ---
 
 ## 🧩 Purpose
 
-This guide explains **how to parse, validate, and operationalize Agents.JSON manifests** within different environments.
+This guide explains **how to parse, validate, and operationalize JSON Agents manifests** within different environments.
 
 It is written for developers building:
 - Agent runtimes
@@ -18,8 +18,8 @@ It is written for developers building:
 
 ## 🧱 1. Core Structure
 
-An **Agents.JSON manifest** is a JSON object adhering to the canonical schema:  
-[`/schema/agents-json.json`](../schema/agents-json.json)
+An **JSON Agents manifest** is a JSON object adhering to the canonical schema:  
+[`/schema/json-agents.json`](../schema/json-agents.json)
 
 At minimum, it MUST include:
 
@@ -55,7 +55,7 @@ At minimum, it MUST include:
 
 ## ⚙️ 2. Validation
 
-Agents.JSON uses **JSON Schema 2020-12**.
+JSON Agents uses **JSON Schema 2020-12**.
 Validation ensures compatibility and predictable interoperability.
 
 You can validate manifests using **AJV**, **Python jsonschema**, or similar tools.
@@ -64,7 +64,7 @@ You can validate manifests using **AJV**, **Python jsonschema**, or similar tool
 
 ```bash
 npm install ajv-cli
-ajv validate -s schema/agents-json.json -d examples/core.json
+ajv validate -s schema/json-agents.json -d examples/core.json
 ```
 
 ### Example (Python)
@@ -73,7 +73,7 @@ ajv validate -s schema/agents-json.json -d examples/core.json
 from jsonschema import validate
 import json
 
-schema = json.load(open("schema/agents-json.json"))
+schema = json.load(open("schema/json-agents.json"))
 manifest = json.load(open("examples/core.json"))
 
 validate(instance=manifest, schema=schema)
@@ -107,7 +107,7 @@ Capabilities and tools can reference their respective schema definitions:
 ```json
 {
   "id": "summarization",
-  "schema": "https://agents.json.org/schema/capabilities/summarization.json"
+  "schema": "https://jsonagents.org/schema/capabilities/summarization.json"
 }
 ```
 
@@ -126,7 +126,7 @@ Tools should specify their type via the canonical registry:
 
 ## 🧰 5. Using Extensions
 
-Agents.JSON supports **non-breaking innovation** via the `x-*` namespace:
+JSON Agents supports **non-breaking innovation** via the `x-*` namespace:
 
 ```json
 {
@@ -173,7 +173,7 @@ Agents in a **graph** topology exchange structured messages using the canonical 
   "from": "router",
   "to": "faq",
   "timestamp": "2025-11-09T12:34:56Z",
-  "payload": { "question": "What is Agents.JSON?" }
+  "payload": { "question": "What is JSON Agents?" }
 }
 ```
 
@@ -184,7 +184,7 @@ Envelope schema:
 
 ## 🧩 8. Interoperability Layers
 
-Agents.JSON manifests can be parsed by:
+JSON Agents manifests can be parsed by:
 
 | System               | Compatibility Strategy                                           |
 | -------------------- | ---------------------------------------------------------------- |
@@ -221,6 +221,6 @@ Agents.JSON manifests can be parsed by:
 
 ---
 
-© 2025 Agents.JSON Project. All rights reserved.
+© 2025 JSON Agents Project. All rights reserved.
 
 
