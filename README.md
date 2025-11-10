@@ -7,7 +7,7 @@
 [![Media Type](https://img.shields.io/badge/media%20type-application%2Fagents%2Bjson-teal.svg)](#)
 [![Status](https://img.shields.io/badge/status-draft-yellow.svg)](./json-agents.md)
 
-> **A Universal JSON Specification for Portable AI Agents**
+> **A Universal JSON Specification for AI Agents**
 
 ---
 
