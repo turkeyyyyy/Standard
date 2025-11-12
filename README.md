@@ -133,7 +133,6 @@ JSON Agents is based entirely on established JSON standards (RFC 8259, ECMA-404,
 |----------|--------|---------|---------------|----------|
 | **Python** | ✅ Production Ready | v1.0.0 | 47/47 (100%) | [`validators/python/`](validators/python/) |
 | JavaScript/TypeScript | 🔜 Coming Soon | - | - | - |
-| Rust | 🔜 Coming Soon | - | - | - |
 | Go | 🔜 Coming Soon | - | - | - |
 
 **Quick validation:**
